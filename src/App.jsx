@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import logo from './assets/logo.png';
-import team from './assets/team.png';
 
+console.log('bg:', '/bg.jpg');
+console.log('logo:', '/logo.png');
+console.log('team:', '/team.png');
 
 const events = [
   { title: "Tech Symposium", date: "June 5", description: "An all-day conference featuring talks from leading engineers." },
@@ -37,7 +38,7 @@ export default function App() {
       {/* Header */}
       <header className="fixed top-0 left-0 w-full z-50 p-4 bg-[#032b3a]/90 flex justify-between items-center shadow">
         <div className="flex items-center space-x-2">
-          <img src={logo} alt="Logo" className="h-12 w-12 object-contain" />
+          <img src="/logo.png" alt="Logo" className="h-12 w-12 object-contain" />
           <h1 className="text-2xl font-bold">MINERVA</h1>
         </div>
         <nav>
@@ -49,9 +50,12 @@ export default function App() {
 
       {/* Main Sections */}
       <main className="pt-20 snap-y snap-mandatory">
-        
+
         {/* Welcome Section */}
-        <section className="h-screen snap-start flex flex-col items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('./assets/bg.jpg')" }}>
+        <section
+          className="h-screen snap-start flex flex-col items-center justify-center bg-cover bg-center"
+          style={{ backgroundImage: `url('/bg.jpg')` }}
+        >
           <div className="bg-[#032b3a]/90 p-10 rounded-xl shadow-xl text-center max-w-4xl">
             <h2 className="text-6xl font-extrabold drop-shadow-md mb-4">Welcome to Our Society</h2>
             <p className="text-2xl">Unite. Innovate. Create.</p>
@@ -62,7 +66,7 @@ export default function App() {
         <section className="h-auto snap-start flex flex-col items-center justify-center bg-cover bg-center py-20 px-6 text-[#f49996] bg-[#032b3a]/110 ">
           {/* Quote & Description Row */}
           <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center mb-16">
-            <img src={team} alt="Team Illustration" className="w-full h-auto rounded-xl shadow-lg" />
+            <img src="/team.png" alt="Team Illustration" className="w-full h-auto rounded-xl shadow-lg" />
             <div className="bg-[#032b3a]/100 p-8 rounded-xl shadow-xl">
               <blockquote className="text-2xl italic mb-2 text-right">
                 "We can only see a short distance ahead, but we can see plenty there that needs to be done."
@@ -84,9 +88,7 @@ export default function App() {
             </div>
             <div className="bg-[#032b3a]/100 p-6 rounded-lg shadow-md border border-[#f49996] transform transition-transform duration-300 hover:-translate-y-2">
               <h3 className="text-xl font-semibold text-center mb-2">🧪 Research</h3>
-              <p className="text-sm text-center">Innovation is at the heart of our mission. We actively support student-led research projects, host brainstorming sessions, and connect members with faculty mentors who guide them through the research process. From publishing papers to participating in national-level competitions, our members engage in meaningful scientific and technical inquiry. The society also maintains a Research Incubation Cell where interdisciplinary ideas take shape and grow into real-world solutions.
-
-</p>
+              <p className="text-sm text-center">Innovation is at the heart of our mission. We actively support student-led research projects, host brainstorming sessions, and connect members with faculty mentors who guide them through the research process. From publishing papers to participating in national-level competitions, our members engage in meaningful scientific and technical inquiry. The society also maintains a Research Incubation Cell where interdisciplinary ideas take shape and grow into real-world solutions.</p>
             </div>
             <div className="bg-[#032b3a]/100 p-6 rounded-lg shadow-md border border-[#f49996] transform transition-transform duration-300 hover:-translate-y-2">
               <h3 className="text-xl font-semibold text-center mb-2">🎉 Events</h3>
