@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import logo from './logo.png';
-import teamImage from './assets/team.png';
+import logo from './assets/logo.png';
+import team from './assets/team.png';
+
 
 const events = [
   { title: "Tech Symposium", date: "June 5", description: "An all-day conference featuring talks from leading engineers." },
@@ -61,7 +62,7 @@ export default function App() {
         <section className="h-auto snap-start flex flex-col items-center justify-center bg-cover bg-center py-20 px-6 text-[#f49996] bg-[#032b3a]/110 ">
           {/* Quote & Description Row */}
           <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center mb-16">
-            <img src={teamImage} alt="Team Illustration" className="w-full h-auto rounded-xl shadow-lg" />
+            <img src={team} alt="Team Illustration" className="w-full h-auto rounded-xl shadow-lg" />
             <div className="bg-[#032b3a]/100 p-8 rounded-xl shadow-xl">
               <blockquote className="text-2xl italic mb-2 text-right">
                 "We can only see a short distance ahead, but we can see plenty there that needs to be done."
