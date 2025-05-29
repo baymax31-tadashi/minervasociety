@@ -58,7 +58,7 @@ export default function App() {
         </section>
 
         {/* About Us */}
-        <section className="h-auto snap-start flex flex-col items-center justify-center bg-cover bg-center py-20 px-6 text-[#f49996] bg-[#032b3a]/60 ">
+        <section className="h-auto snap-start flex flex-col items-center justify-center bg-cover bg-center py-20 px-6 text-[#f49996] bg-[#032b3a]/110 ">
           {/* Quote & Description Row */}
           <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center mb-16">
             <img src={teamImage} alt="Team Illustration" className="w-full h-auto rounded-xl shadow-lg" />
@@ -95,7 +95,7 @@ export default function App() {
         </section>
 
         {/* What's New Carousel */}
-        <section className="h-screen snap-start flex items-center justify-center bg-[#032b3a]/60 ">
+        <section className="h-screen snap-start flex items-center justify-center bg-[#032b3a]/100 ">
           <Carousel />
         </section>
       </main>
